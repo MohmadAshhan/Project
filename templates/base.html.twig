@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/css/bootstrap-material-design.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/css/icons.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/font-awesome/css/font-awesome.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/font-awesome/css/mixins.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/font-awesome/css/variables.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/icons/material-design/css/materialdesignicons.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/plugins/animate/animate.css') }}">
+            <link rel="stylesheet" href="{{ asset('urora/plugins/dropify/css/dropify.min.css') }}">
+
+        {% endblock %}
+    </head>
+    <body class="fixed-left">
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                <i class="mdi mdi-close"></i>
+            </button>
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <div class="text-center">
+                    <!--<a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> Urora</a>-->
+                    <a href="{{ path('site') }}" class="logo">
+                        <img src="{{ asset('build/images/logo-lg.png') }}" alt="" class="logo-large">
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-inner slimscrollleft" id="sidebar-main">
+
+                <div id="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Меню</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span> Главня
+                                        <span class="badge badge-pill badge-primary float-right"></span>
+                                    </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('contest') }}" class="waves-effect">
+                                <i class="fa fa-gift" aria-hidden="true"></i>
+                                <span> Розыгрыши </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('create-contest') }}" class="waves-effect">
+                                <i class="fa fa-gift" aria-hidden="true"></i>
+                                <span>Добавить розыгрыш</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- end sidebarinner -->
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- Start right Content here -->
+
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+
+                <!-- Top Bar Start -->
+                <div class="topbar">
+
+                    <nav class="navbar-custom">
+                        <div class="dropdown notification-list nav-pro-img">
+
+                            <div class="list-inline-item hide-phone app-search">
+                                <form role="search" class="">
+                                    <div class="form-group pt-1">
+                                        <input type="text" class="form-control" placeholder="Search..">
+                                        <a href="">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <ul class="list-inline float-right mb-0 mr-3">
+                            <!-- language-->
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                   aria-expanded="false">
+                                    <i class="ti-email noti-icon"></i>
+                                    <span class="badge badge-danger heartbit noti-icon-badge">5</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title align-self-center">
+                                        <h5>
+                                            <span class="badge badge-danger float-right">745</span>Messages</h5>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-fluid rounded-circle"
+                                            /> </div>
+                                        <p class="notify-details">
+                                            <b>Charles M. Jones</b>
+                                            <small class="text-muted">Dummy text of the printing and typesetting industry.</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-3.jpg" alt="user-img" class="img-fluid rounded-circle"
+                                            /> </div>
+                                        <p class="notify-details">
+                                            <b>Thomas J. Mimms</b>
+                                            <small class="text-muted">You have 87 unread messages</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-4.jpg" alt="user-img" class="img-fluid rounded-circle"
+                                            /> </div>
+                                        <p class="notify-details">
+                                            <b>Luis M. Konrad</b>
+                                            <small class="text-muted">It is a long established fact that a reader will</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        View All
+                                    </a>
+
+                                </div>
+                            </li>
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                   aria-expanded="false">
+                                    <i class="ti-bell noti-icon"></i>
+                                    <span class="badge badge-success a-animate-blink noti-icon-badge">3</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5>
+                                            <span class="badge badge-danger float-right">87</span>Notification</h5>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-primary">
+                                            <i class="mdi mdi-cart-outline"></i>
+                                        </div>
+                                        <p class="notify-details">
+                                            <b>Your order is placed</b>
+                                            <small class="text-muted">Dummy text of the printing and typesetting industry.</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-success">
+                                            <i class="mdi mdi-message"></i>
+                                        </div>
+                                        <p class="notify-details">
+                                            <b>New Message received</b>
+                                            <small class="text-muted">You have 87 unread messages</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-warning">
+                                            <i class="mdi mdi-martini"></i>
+                                        </div>
+                                        <p class="notify-details">
+                                            <b>Your item is shipped</b>
+                                            <small class="text-muted">It is a long established fact that a reader will</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        View All
+                                    </a>
+
+                                </div>
+                            </li>
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                   aria-expanded="false">
+                                    <img src="{{ 'build/images/users/avatar-1.jpg' }}" alt="user" class="rounded-circle img-thumbnail">
+                                </a>
+                                {% if is_granted('ROLE_USER') %}
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        {{ app.user.username }}
+                                    </div>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="mdi mdi-account-circle m-r-5 text-muted"></i> Профиль</a>
+{#                                    <a class="dropdown-item" href="#">#}
+{#                                        <i class="mdi mdi-wallet m-r-5 text-muted"></i> My Wallet</a>#}
+{#                                    <a class="dropdown-item d-block" href="#">#}
+{#                                        <span class="badge badge-success float-right">5</span>#}
+{#                                        <i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>#}
+{#                                    <a class="dropdown-item" href="#">#}
+{#                                        <i class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>#}
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ path('app_logout') }}">
+                                        <i class="mdi mdi-logout m-r-5 text-muted"></i>Выйти</a>
+                                </div>
+                                {% else %}
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                            Гость
+                                    </div>
+                                    <a class="dropdown-item" href="{{ path('app_login') }}">
+                                        <i class="mdi mdi-account-circle m-r-5 text-muted"></i>Войти</a>
+                                </div>
+                                {% endif %}
+
+                            </li>
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left waves-light waves-effect">
+                                    <i class="mdi mdi-menu"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+
+                    </nav>
+
+                </div>
+                <!-- Top Bar End -->
+
+                <div class="page-content-wrapper dashborad-v">
+
+                    <div class="container-fluid">
+
+                        {% block body %}
+
+                        {% endblock %}
+
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- Page content Wrapper -->
+            </div>
+            <!-- content -->
+
+            <footer class="footer">
+                © 2018 Urora by Mannatthemes.
+            </footer>
+
+        </div>
+        <!-- End Right content here -->
+
+    </div>
+    <!-- END wrapper -->
+
+
+
+        {% block javascripts %}
+            <script src="{{ asset('build/js/app.js') }}"></script>
+            <script src="{{ asset('build/runtime.js') }}"></script>
+            <script src="{{ asset('urora/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('urora/js/popper.min.js') }}"></script>
+            <script src="{{ asset('urora/js/bootstrap-material-design.js') }}"></script>
+            <script src="{{ asset('urora/js/app.js') }}"></script>
+            <script src="{{ asset('urora/js/detect.js') }}"></script>
+            <script src="{{ asset('urora/js/fastclick.js') }}"></script>
+            <script src="{{ asset('urora/js/jquery.blockUI.js') }}"></script>
+            <script src="{{ asset('urora/js/jquery.nicescroll.js') }}"></script>
+            <script src="{{ asset('urora/js/jquery.scrollTo.min.js') }}"></script>
+            <script src="{{ asset('urora/js/jquery.slimscroll.js') }}"></script>
+            <script src="{{ asset('urora/js/modernizr.min.js') }}"></script>
+            <script src="{{ asset('urora/js/waves.js') }}"></script>
+            <script src="{{ asset('build/app~css/icons.js') }}"></script>
+            <script src="{{ asset('build/app~css/style.js') }}"></script>
+            <script src="{{ asset('urora/plugins/dropify/js/dropify.min.js') }}"></script>
+            <script src="{{ asset('urora/pages/upload-init.js') }}"></script>
+            <script src="{{ asset('build/site.js') }}"></script>
+
+
+
+        {% endblock %}
+    </body>
+</html>

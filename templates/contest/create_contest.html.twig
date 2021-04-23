@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContestController!{% endblock %}
+
+
+{% block body %}
+{#    <div class="card-body" style="display: none">#}
+{#        <h4 class="mt-0 header-title">Добавить ваш розыгрыш</h4>#}
+{#        <div class="general-label">#}
+{#            <form class="form-inline mb-0 row" id="form-contest-create" enctype="multipart/form-data">#}
+{#                <div class="form-group">#}
+{#                    <label for="inputNickName" class="bmd-label-floating ">Ваш никнейм</label>#}
+{#                    <input type="email" name="nickname" class="form-control" id="inputNickName">#}
+{#                    <span class="bmd-help">We'll never share your email with anyone else.</span>#}
+{#                </div>#}
+{#                <div class="form-group bmd-form-group">#}
+{#                    <label for="conditionContest" class="bmd-label-floating">Условия розыгрыша</label>#}
+{#                    <textarea class="form-control" name="conditionContest" id="conditionContest" rows="3"></textarea>#}
+{#                </div>#}
+{#                <div class="form-group col-6 bmd-form-group">#}
+{#                    <input type="text" name="prize[name]" class="form-control" id="prizeName" placeholder="Название приза">#}
+{#                </div>#}
+{#                <div class="form-group col-6 bmd-form-group">#}
+{#                    <input type="number" name="prize[amount]" class="form-control" id="prizeAmount" placeholder="Количество">#}
+{#                </div>#}
+{#                <div class="form-group col-6 bmd-form-group">#}
+{#                    <input type="number" name="prize[description]" class="form-control" id="prizeDescription" placeholder="Описание">#}
+{#                </div>#}
+
+{#                <button type="submit" class="btn btn-primary btn-raised mb-0">Добавить</button>#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="card-body">
+        <h4 class="mt-0 header-title">Добавить ваш розыгрыш</h4>
+        <form class="mb-0" id="form-contest-create"  enctype="multipart/form-data" multiple>
+            <div class="form-row">
+                <div class="form-group col-md-12 bmd-form-group">
+                    <label for="inputNickName" class="bmd-label-floating ">Ваш никнейм</label>
+                    <input type="email" name="nickname" class="form-control" id="inputNickName">
+                </div>
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="conditionContest" class="bmd-label-floating">Условия розыгрыша</label>
+                <textarea class="form-control" name="conditionContest" id="conditionContest" rows="3"></textarea>
+            </div>
+            <div class="prises">
+
+            </div>
+            <hr>
+        </form>
+        <br>
+        <div class="form-row">
+            <button type="submit" id="add-prise-block-image" class="btn btn-raised btn-primary mb-0">Добавить приз</button>
+        </div>
+        <br>
+        <div class="form-row col-sm-2 ml-auto">
+            <div class="savePrize">
+                <button type="submit" id="create-contest" class="btn btn-raised btn-success mb-0">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

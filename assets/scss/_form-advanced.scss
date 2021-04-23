@@ -1,0 +1,198 @@
+/* ==============
+  Form-Advanced
+===================*/
+/* Datepicker */
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
+// Color variables
+$white: #ffffff;
+
+$primary: #3f51b5;
+$success: #009688;
+$info: #2196F3;
+$warning: #ffb430;
+$danger: #ef4f4c;
+$secondary:#bdbcbc;
+
+
+
+
+$dark: #2d3b48;
+$muted: #707070;
+$greylight:#c1c5e2;
+
+$lightdark5: #555555;
+$lightgray: #dddddd;
+$lightgray1:#a7a7a7;
+$light: #eff3f6;
+$lightdark3: #333333;
+$lightdark4: #444444;
+$light5: #f5f5f5;
+$light3: #f3f3f3;
+$light9: #f9f9f9;
+$light-alt: #fafafa;
+$lightdark7: #797979;
+$lightdark-alt: #cccccc;
+
+$bg-body: #eaeaea;
+$left-bar: #ffffff;
+$bg-topbar: #3f51b5;
+$lightpink:#d55cbf;
+$lightblue:#8186d8;
+$lightgreen:#a8a16d;
+$blue:#39599a;
+
+$font-primary: 'Rubik', sans-serif;
+
+$shadow: 1px 0px 20px rgba(0,0,0,0.05);
+
+$base-font: 15px;
+
+
+
+// Width variables
+$width: 100%;
+
+
+// Height variables
+$height: 100%;
+
+
+
+.datepicker {
+  border: 1px solid $lightgray;
+  padding: 8px;
+}
+
+.datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,.datepicker table tr td.today, .datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover, .datepicker table tr td.today:hover,.datepicker table tr td.selected,
+.datepicker table tr td.selected.disabled, .datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected:hover  {
+  background-color: $primary !important;
+  background-image: none;
+  box-shadow: none;
+  color: $white;
+}
+
+/* Bootstrap-touchSpin */
+.bootstrap-touchspin .input-group-btn-vertical .btn {
+  padding: 9px 12px;
+}
+.bootstrap-touchspin .input-group-btn-vertical i {
+  top: 4px;
+  left: 8px;
+}
+.input-group-addon {
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+}
+
+/* Prism */
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: $light;
+}
+
+/* Rating */
+.badge:empty {
+  padding: 0;
+}
+
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid #d8d8d8;
+  height: 38px;
+}
+
+.select2-container--default .select2-selection--single:focus {
+  outline: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 38px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 38px;
+  right: 8px;
+}
+
+.select2-container .select2-selection--multiple {
+  min-height: 38px;
+  border: 1px solid #d8d8d8;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+  margin-top: 8px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin-top: 7px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: solid 1px #d8d8d8;
+  outline: 0;
+}
+
+/*---datetimepicker---*/
+.dtp-btn-cancel {
+  margin-right: 5px;
+}
+
+.addon-color-picker .btn {
+  padding: 8px;
+  line-height: 0;
+  border-color: #bfbfbf;
+}
+/*--colorpicker--*/
+.asColorPicker-clear {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 45px;
+  text-decoration: none;
+}
+
+.asColorPicker-trigger {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  height: 32px;
+  width: 32px;
+  border: 0;
+}
+
+.asColorPicker-dropdown {
+  max-width: 260px;
+}
+
+.asColorPicker-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-right: 35px;
+}
+.input-group .input-group-addon{
+  border: 1px solid $lightgray;
+  width: 36px;
+  height: 36px;
+}
+.form-material label{
+  font-weight: 400;
+  color: $muted;
+}
+
+.switch{
+  line-height: 24px;
+}

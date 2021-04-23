@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{ asset('urora/icons/material-design/css/materialdesignicons.css') }}">
+<link rel="stylesheet" href="{{ asset('urora/plugins/animate/animate.css') }}">
+<link rel="stylesheet" href="{{ asset('urora/plugins/dropify/css/dropify.min.css') }}">
+<div class="prize" id="prise_parent">
+    <div class="form-row">
+        <div class="form-group col-md-4 bmd-form-group">
+            <input type="text" name="prize[name][]" class="form-control" id="prizeName" placeholder="Название приза">
+        </div>
+        <div class="form-group col-md-1 bmd-form-group">
+            <input type="number" name="prize[amount][]" class="form-control" id="prizeAmount" placeholder="Кол-во">
+        </div>
+        <div class="form-group col-md-7 bmd-form-group">
+            <input type="text" name="prize[description][]" class="form-control" id="prizeDescription" placeholder="Описание">
+        </div>
+    </div>
+    <div class="col-xl-4 block-prise-image">
+        <div class="card m-b-30">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">Загрузите изображение</h4>
+                <input type="file" name="prize[image][]" id="input-file-now" class="dropify input-file-now" />
+            </div>
+        </div>
+    </div>
+{#    <div class="form-row form-group prise-image" id="prise_image_block">#}
+{#    </div>#}
+{#    <div class="form-row">#}
+{#        <button type="submit" id="add-prize-image" class="btn btn-raised btn-primary mb-0">Добавить картинку</button>#}
+{#    </div>#}
+</div>
+<script src="{{ asset('urora/plugins/dropify/js/dropify.min.js') }}"></script>
+<script src="{{ asset('urora/pages/upload-init.js') }}"></script>
+<script src="{{ asset('build/site.js') }}"></script>
